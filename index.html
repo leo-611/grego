@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panteão Grego</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="torre torre-esquerda">
+        <div class="simbolo">Δ</div>
+        <div class="simbolo">⚡</div>
+    </div>
+    
+    <div class="container-conteudo">
+        <h1>Panteão Grego</h1>
+        
+        <div class="poseidon-container">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7187ff2c-a588-451a-942a-76a559264192.png" alt="Poseidon majestoso em seu trono submarino, segurando um tridente dourado, com coroa de corais e cavalos marinos ao redor, fundo em tons verdes e roxos">
+        </div>
+        
+        <ul class="deuses-lista">
+            <li id="deus1">Zeus</li>
+            <li id="deus2">Hera</li>
+            <li id="deus3">Atena</li>
+        </ul>
+    </div>
+    
+    <div class="torre torre-direita">
+        <div class="simbolo">⚡</div>
+        <div class="simbolo">Δ</div>
+    </div>
+    
+    <footer>
+        Mitologia Grega © 2023
+    </footer>
+    
+    <script>
+        const deuses = document.querySelectorAll('.deuses-lista li');
+        const colors = ['#2ecc71', '#9b59b6', '#e74c3c', '#3498db', '#f1c40f'];
+        
+        function changeColors() {
+            deuses.forEach((deus, index) => {
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                deus.style.color = randomColor;
+                deus.style.textShadow = `2px 2px 4px ${randomColor}44`;
+            });
+            
+            setTimeout(changeColors, 2000);
+        }
+        
+        changeColors();
+    </script>
+</body>
+</html>

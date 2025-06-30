@@ -1,0 +1,103 @@
+:root {
+    --verde: #2ecc71;
+    --roxo: #9b59b6;
+    --dourado: #f1c40f;
+    --preto: #2c3e50;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: var(--preto);
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    min-height: 100vh;
+}
+
+.torre {
+    background: linear-gradient(to bottom, var(--roxo), var(--verde));
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.torre-esquerda {
+    border-right: 3px solid var(--dourado);
+}
+
+.torre-direita {
+    border-left: 3px solid var(--dourado);
+}
+
+.simbolo {
+    font-size: 3rem;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.container-conteudo {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: var(--roxo);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.poseidon-container {
+    margin: 30px auto;
+    max-width: 600px;
+    border: 5px solid var(--verde);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.poseidon-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.deuses-lista {
+    list-style-type: none;
+    padding: 0;
+    margin: 40px 0;
+}
+
+.deuses-lista li {
+    font-size: 1.8rem;
+    padding: 15px;
+    margin: 10px 0;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.deuses-lista li:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    grid-column: 1 / 4;
+    background: linear-gradient(to right, var(--verde), var(--roxo));
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+    .torre {
+        display: none;
+    }
+}
